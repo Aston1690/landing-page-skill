@@ -31,8 +31,8 @@ for rel in required_refs:
 
 if len(lines) > 500:
     errors.append(f"SKILL.md has {len(lines)} lines; must stay <= 500")
-if "version: 3.2.0" not in text:
-    errors.append("SKILL.md must declare version 3.2.0")
+if "version: 3.3.0" not in text:
+    errors.append("SKILL.md must declare version 3.3.0")
 phase_numbers = [int(n) for n in re.findall(r"^## Phase (\d+):", text, re.M)]
 if phase_numbers != list(range(1, 10)):
     errors.append(f"phase numbers must be 1-9; got {phase_numbers}")
@@ -54,7 +54,7 @@ try:
     if not match:
         raise ValueError("policy-matrix.md has no fenced JSON object")
     policy = json.loads(match.group(1))
-    if policy.get("version") != "3.2.0":
+    if policy.get("version") != "3.3.0":
         errors.append("policy matrix version mismatch")
     modes = policy.get("modes", {})
     expected_modes = {
@@ -121,8 +121,8 @@ except Exception as exc:
     evals = []
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8")
-if "Landing Page Skill v3.2" not in readme:
-    errors.append("README is not v3.2")
+if "Landing Page Skill v3.3" not in readme:
+    errors.append("README is not v3.3")
 
 if errors:
     print("FAIL")

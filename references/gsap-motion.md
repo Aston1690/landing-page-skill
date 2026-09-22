@@ -1,17 +1,16 @@
 # GSAP Production Motion
 
-Use this reference only after the static page passes visual QA.
+Read when planning every full build; implement motion after the static page passes visual QA.
 
-## 1. Mode selection
+## Default interactive motion contract
 
-Resolve motion from `policy-matrix.md`, then apply a decision gate covering narrative value, brand fit, runtime constraints, accessibility, existing-motion compatibility, and user request. “No GSAP” is a first-class premium result with written rationale. Use restrained CSS-only or static behaviour when:
+For new landing pages and substantial redesigns, motion is included by default: use GSAP for authored timeline choreography and ScrollTrigger where viewport or scroll progression drives it. Do not wait for the user to request animation separately. CSS remains appropriate for small hover/focus/pressed transitions. Preserve an explicitly required existing animation system rather than stacking competing libraries.
 
-- the user explicitly requests static/minimal motion;
-- the brand calls for near-still editorial restraint;
-- accessibility, performance, embed, email, print, or platform constraints rule GSAP out;
-- the existing project has an approved motion system that must be preserved.
+Plan and implement an intentional hero entrance, section-specific movement that explains or emphasises content, and responsive feedback for the controls actually present (links, CTAs, navigation, menus, tabs, accordions and forms). Choose one or two brand-specific signature moments where the content supports them. A hero fade and generic fade-ups everywhere do not meet an interactive brief. Do not invent controls, product behaviour or statistics to create animation opportunities.
 
-Motion is conditional by project mode, not ceremonial.
+Choose intensity from the brand: a restrained page can still feel responsive and alive. Exemptions are explicit static/minimal-motion requests, preservation/clone constraints, narrow edits, or a concrete runtime/performance/accessibility limitation. Record the exact constraint and implemented alternative; “motion was not requested” or “the screenshots look good” is not a valid exemption. Reduced-motion visitors receive an accessible alternative, not missing content.
+
+Record each planned behaviour, trigger, target, sequence, duration/easing, mobile adaptation, reduced-motion result and acceptance evidence in the project brief. In a harness run, add a motion criterion with failure conditions and carry its observations into review. Missing planned motion or missing runtime observations blocks an unqualified completion claim.
 
 ## 2. Motion storyboard
 
@@ -28,7 +27,7 @@ If the purpose is only “looks cool,” remove it.
 
 ## 3. Scope
 
-Implement only the sequences justified by the storyboard. Do not require a hero timeline, trigger count, parallax motif, or animation quota when the content does not need them. Every animated page still requires complete reduced-motion behaviour, cleanup, responsive refresh, and interaction safety. Do not animate every paragraph or repeat the same fade-up across the page.
+Implement only the sequences justified by the storyboard. Meet the default motion contract without arbitrary trigger counts or decorative parallax quotas. Every animated page still requires complete reduced-motion behaviour, cleanup, responsive refresh, and interaction safety. Do not animate every paragraph or repeat the same fade-up across the page.
 
 ## 4. Implementation requirements
 
@@ -79,3 +78,6 @@ Inspect:
 9. Performance: no layout-property animation, runaway timelines, duplicate triggers, or missing cleanup.
 
 Motion fails the gate if it makes reading harder, delays the CTA, causes content instability, or appears generic/repetitive.
+Save runtime observations in `QA/motion-review.md`: planned behaviour, element, trigger/action, viewport, observed motion, final state, reduced-motion result, evidence and pass/fail. Watch desktop/mobile in motion; capture a recording where available or time-separated states with observations. Missing planned motion or runtime evidence fails acceptance. Still screenshots and GSAP imports are insufficient.
+
+API references: https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/ and https://gsap.com/docs/v3/Plugins/ScrollTrigger/.

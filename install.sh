@@ -6,7 +6,7 @@ CODEX_ROOT="${CODEX_HOME:-$HOME/.codex}"
 SKILL_DIR="$CODEX_ROOT/skills/$SKILL_NAME"
 REPO_URL="https://github.com/Aston1690/landing-page-skill.git"
 
-printf '\nInstalling Codex skill: %s v3.2.0\n' "$SKILL_NAME"
+printf '\nInstalling Codex skill: %s v3.3.0\n' "$SKILL_NAME"
 printf '%s\n' '----------------------------------------'
 
 if [ -d "$SKILL_DIR/.git" ]; then

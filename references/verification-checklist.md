@@ -89,3 +89,7 @@ After deploying to Vercel (or other host):
 | Sticky header overlaps content | Add `scroll-padding-top` to `html` element |
 | Gallery images distorted | Use `object-fit: cover` with fixed height |
 | Stale preview | `location.reload()` before every screenshot |
+
+## Motion evidence
+
+For full builds, reconcile the motion storyboard with `QA/motion-review.md`. Watch hero and section sequences, exercise hover/focus/press and applicable control states, verify mobile and reduced-motion alternatives, and record actual runtime results. Missing sequences or observations remain failures; do not infer animation quality from a screenshot.

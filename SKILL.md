@@ -1,9 +1,9 @@
 ---
 name: landing-page
-description: "Build complete landing pages, sales/campaign pages, one-page marketing sites, and homepage redesigns with one-question-at-a-time intake, exact user-supplied copy, official-site brand/logo extraction, conditional Imagegen/GSAP, risk-based responsive QA, a hard premium gate, and default Vercel deployment with live verification. Also use when converting user-provided URLs/docs/PDFs/briefs into those marketing surfaces. Do not use for dashboards, native-app UI, documentation, email templates, or isolated component-only fixes."
+description: "Build complete landing pages, sales/campaign pages, one-page marketing sites, and homepage redesigns with one-question-at-a-time intake, exact user-supplied copy, official-site brand/logo extraction, conditional Imagegen and default purposeful GSAP choreography, risk-based responsive QA, a hard premium gate, and default Vercel deployment with live verification. Also use when converting user-provided URLs/docs/PDFs/briefs into those marketing surfaces. Do not use for dashboards, native-app UI, documentation, email templates, or isolated component-only fixes."
 license: MIT
 metadata:
-  version: 3.2.0
+  version: 3.3.0
   author: Akhil
   hermes:
     tags: [landing-pages, frontend-design, image-generation, gsap, responsive-web, browser-qa, vercel]
@@ -23,7 +23,7 @@ Deliver:
 - exact user-supplied copy preserved verbatim; write, edit, or restructure copy only when the user explicitly asks;
 - a working brand system, asset manifest/provenance notes, and integration notes;
 - production imagery rather than placeholders when image generation or approved assets are available;
-- GSAP/ScrollTrigger motion when the selected project mode calls for it;
+- purposeful GSAP choreography, scroll-triggered section movement and control micro-interactions by default for full builds, subject to the documented mode exceptions;
 - SEO/OG metadata, semantic structure, accessibility states, and optimised media;
 - browser-tested user viewport, breakpoint boundaries, tablet, narrow mobile, and common mobile states;
 - Vercel deployment by default, followed by live desktop/mobile verification; ask only when authentication or another real blocker prevents deployment.
@@ -143,9 +143,9 @@ Screenshot-QA and fix the static composition before starting GSAP.
 
 ## Phase 6: GSAP production pass
 
-Read `references/gsap-motion.md` when the mode uses animation.
+Read `references/gsap-motion.md` for every full build and substantial redesign; plan motion in the brief and implement it after static composition QA.
 
-Motion is selected by the policy matrix and a decision gate covering narrative value, brand fit, runtime constraints, accessibility, existing motion compatibility, and user request. “No GSAP” is a valid premium result with written rationale. When used, every sequence must communicate hierarchy, storytelling, feedback, or state; never satisfy an animation quota.
+Motion is on by default for full builds under the policy matrix. Deliver hero choreography, content-specific section movement and feedback for existing interactive controls. Adapt intensity to the brand. A valid static/runtime/preservation constraint may change this; absence of an explicit animation request is not a reason to skip. Record runtime observations in `QA/motion-review.md`; screenshots alone cannot pass motion acceptance.
 
 Keep critical content visible if scripts fail or load slowly. Do not use raw window scroll listeners. Verify active-tab animation because background tabs throttle timers.
 

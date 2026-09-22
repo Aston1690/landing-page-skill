@@ -1,4 +1,4 @@
-# Landing Page Skill v3.2.0
+# Landing Page Skill v3.3.0
 
 A premium Codex skill for intake, evidence-led brand research, image art direction, production asset generation, implementation, purposeful motion, browser QA, scoring, and verified deployment.
 
@@ -13,7 +13,7 @@ Install this skill: https://github.com/Aston1690/landing-page-skill
 For a reproducible version-pinned installation, paste:
 
 ```text
-Install this skill: https://github.com/Aston1690/landing-page-skill/tree/v3.2.0
+Install this skill: https://github.com/Aston1690/landing-page-skill/tree/v3.3.0
 ```
 
 ## Install from the terminal
@@ -34,7 +34,7 @@ Restart Codex, then describe the landing-page task.
 
 ## Version traceability
 
-This release is `v3.2.0`. The skill requires every project brief and completion report to state the exact `landing-page` version used, making future variants and updates auditable.
+This release is `v3.3.0`. The skill requires every project brief and completion report to state the exact `landing-page` version used, making future variants and updates auditable.
 
 ## Workflow
 
@@ -43,7 +43,7 @@ This release is `v3.2.0`. The skill requires every project brief and completion 
 3. Source-backed conversion/content architecture.
 4. Frontend Design + Design Taste plus policy-routed Imagegen references and production imagery.
 5. Complete static implementation and screenshot approval.
-6. Policy-routed GSAP/ScrollTrigger motion pass or a documented premium static result.
+6. Default GSAP choreography and control micro-interactions, with documented static/preservation/runtime exceptions.
 7. Desktop/tablet/mobile browser and interaction QA.
 8. Binary critical checks plus an evidence-backed 0/5/8/10 quality gate; N/A requires rationale.
 9. SEO, performance, source notes, and default Vercel deployment with live verification.
@@ -55,7 +55,7 @@ This release is `v3.2.0`. The skill requires every project brief and completion 
 - `imagegen-frontend-web`: conditional on visual ambiguity, image-led direction, requested concepts, or insufficient approved assets.
 - production image generator or `media-use`: individual website imagery after art direction is locked.
 - `imagegen-frontend-mobile`: app-native screen media only for mobile-app marketing pages, never responsive web design.
-- GSAP/ScrollTrigger: conditional on narrative value, brand fit, runtime/accessibility, existing motion and user request.
+- GSAP/ScrollTrigger: default for full builds, adapted to brand and content; static, narrow-edit and required existing-system constraints are preserved.
 
 ## Repository files
 
@@ -98,3 +98,7 @@ The semantic contract check enforces the main-file size, nine phases, six author
 ## License
 
 MIT
+
+## Landing-page director
+
+The companion `skills/landing-page-director/` folder contains the director workflow and the same default motion requirements. Install that folder as `landing-page-director` if using the director workflow. Its optional local harness integration requires a separately installed harness; no personal harness paths are bundled.

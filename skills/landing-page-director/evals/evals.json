@@ -1,0 +1,65 @@
+{
+  "skill_name": "landing-page-director",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a landing page for a Dental AI multinational. I want it to feel premium and trustworthy, but I have not chosen the colours, fonts, layout, brand name, copy, or image direction yet.",
+      "expected_output": "The assistant begins with a concise source-material preflight, asks for any current client website, content document, brand guide and supplied assets before visual questions, provides a clear start-from-scratch option, and does not start coding or invent company claims.",
+      "files": [],
+      "expectations": [
+        "The first response asks for source material before asking the user to choose a visual direction.",
+        "The request explicitly covers a current website or source URL, approved content/copy, brand guidelines or identity files, and supplied media or product visuals.",
+        "The user can attach files, paste links, provide paths, or confirm that nothing exists and the project should start from scratch.",
+        "No source code or fabricated dental-company facts are produced before direction approval."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build a seven-section B2B cybersecurity landing page in the existing Next.js repository. The approved copy is in copy.md and must remain exact. Use IBM Plex Sans, near-black #111111, safety orange #FF5A1F, sharp 4px corners, editorial asymmetry, technical macro photography, and a demo-request form. Do not ask me about colours, typography, layout, imagery, or conversion because those are approved.",
+      "expected_output": "The assistant skips redundant design questions, inspects the repository and locked copy, compiles the supplied decisions into a design brief, creates one reference per section before implementation, and verifies the working result responsively.",
+      "files": [],
+      "expectations": [
+        "The workflow does not re-ask decisions explicitly supplied by the user.",
+        "The approved copy is treated as locked and no claims are invented.",
+        "The plan creates seven separate section reference images rather than one compressed full-page board.",
+        "Implementation preserves the existing Next.js stack and includes functional form and responsive verification."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Redesign the homepage at https://example.com for a warm, editorial healthcare brand. Keep every word and all existing routes, but fix the generic AI look, weak mobile hierarchy, inconsistent imagery, and non-functional calls to action. Work in the repository I supplied.",
+      "expected_output": "The assistant audits the current site and repository before changing anything, preserves the locked copy and routes, resolves the visual direction through minimal questioning, builds approved section references, and performs functional and responsive QA.",
+      "files": [],
+      "expectations": [
+        "The current page, repository, assets, and routes are audited before redesign work.",
+        "All existing copy and routes are explicitly protected.",
+        "The workflow addresses imagery consistency, mobile hierarchy, and functional calls to action.",
+        "The completed page is compared with approved references at desktop and mobile widths."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Add a premium animation pass to the approved landing page in this React repository. The brand should feel calm, clinical and precise. I mentioned GSAP because I like smooth scrolling effects, but choose the right technology. Include a scan-reveal hero, an explanatory workflow sequence, subtle section entrances and polished form feedback. Keep mobile performance and reduced-motion users in mind.",
+      "expected_output": "The assistant defines a calm clinical motion language, audits the existing stack before choosing libraries, uses CSS or the existing React motion library for simple work and reserves GSAP for sequences that truly require timelines or scroll orchestration. It documents responsive and reduced-motion variants and verifies the rendered motion in a browser.",
+      "files": [],
+      "expectations": [
+        "The response defines project-specific motion words and a consistent timing or easing system.",
+        "GSAP is selected only for effects that need advanced timeline or scroll control, not for every reveal.",
+        "Every substantial sequence has a mobile adaptation and reduced-motion equivalent.",
+        "The plan includes browser inspection of trigger timing, scrolling, interactions, responsive widths and console errors."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I do not like this landing page. The hero feels crowded, the heading is far too large, the navbar logo has a white box and dominates the header, the numbered rows sit against their divider lines, the final CTA feels unfinished, and I want the decorative tick removed. Redesign it rather than just tweaking colours.",
+      "expected_output": "The assistant classifies the request as a section or direction-level redesign, preserves locked content and approved brand assets, records each rejected treatment, creates materially different references before rebuilding, and verifies every correction in the rendered page at desktop and mobile widths.",
+      "files": [],
+      "expectations": [
+        "The assistant does not treat an overall design rejection as a series of cosmetic colour or radius tweaks.",
+        "The proposed correction reduces hero competition and headline scale while keeping one dominant message and action.",
+        "Logo transparency and optical size, divider clearance, CTA prominence, and removal of the decorative tick are treated as explicit acceptance criteria.",
+        "The assistant checks shared components for repeated defects and visually verifies the result at 1440 and 390 pixels."
+      ]
+    }
+  ]
+}

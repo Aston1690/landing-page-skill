@@ -140,3 +140,6 @@ Ask bluntly:
 - Are there remnants, placeholders, fake states, or unapproved side effects?
 
 A user rejection such as “basic,” “generic,” or “bad” invalidates the current art direction. Stop micro-tweaking, reset the thesis/reference/first fold, rebuild, and rerun the gate.
+## Default motion completion gate
+
+For full builds, missing planned hero/section choreography or control micro-interactions fails acceptance unless an explicit mode exception is recorded. Read `QA/motion-review.md` and compare the storyboard to real desktop/mobile runtime observations and reduced-motion results. Dependency presence and still screenshots are not motion evidence. Never use N/A because animation was not separately requested.

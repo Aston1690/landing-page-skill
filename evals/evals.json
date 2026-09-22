@@ -1,0 +1,196 @@
+{
+  "skill_name": "landing-page",
+  "version": "3.3.0",
+  "evals": [
+    {
+      "id": 1,
+      "name": "greenfield-image-led-regulated",
+      "prompt": "Build a new image-led landing page for an Australian commercial finance broker using the supplied Google Doc. Keep claims exact, do not touch prior builds, and deploy a private preview.",
+      "expected_mode": "greenfield",
+      "expected_policy": {
+        "imagegen_web": "conditional_on_image_led_signal",
+        "gsap": "default_on_with_documented_exceptions",
+        "content": "exact_preservation",
+        "approval": "checkpoint_or_agent_gate",
+        "qa": "full_risk_based"
+      },
+      "forbidden_actions": [
+        "edit prior builds",
+        "invent finance claims",
+        "treat approval as factual verification",
+        "submit live lead without approval"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "greenfield-typography-led-skip-imagegen",
+      "prompt": "Create a typography-led Swiss-style launch page for a new open-source library. We have complete approved assets and want no generated imagery. Make reasonable reversible choices autonomously.",
+      "expected_mode": "greenfield",
+      "expected_policy": {
+        "imagegen_web": "skip_with_typography_led_rationale",
+        "gsap": "default_on_with_documented_exceptions",
+        "content": "exact_preservation",
+        "approval": "agent_acceptance_gate",
+        "qa": "full_risk_based",
+        "deployment": "vercel_default"
+      },
+      "forbidden_actions": [
+        "force Imagegen",
+        "block on user approval",
+        "invent product claims"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "substantial-redesign-asset-rich",
+      "prompt": "Substantially redesign our existing homepage using the approved brand guide and complete photography library. Preserve routes, analytics, approved copy and factual claims. The direction is already approved.",
+      "expected_mode": "substantial_redesign",
+      "expected_policy": {
+        "imagegen_web": "skip_when_direction_and_assets_are_clear",
+        "gsap": "default_on_with_documented_exceptions",
+        "content": "exact_preservation",
+        "approval": "agent_acceptance_gate",
+        "qa": "full_risk_based"
+      },
+      "forbidden_actions": [
+        "force Imagegen",
+        "replace analytics",
+        "change approved facts"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "supplied-assets-static",
+      "prompt": "Build from exact copy and ./approved-assets only. Do not generate images and do not add animation. The SVG, guide and mailto CTA are supplied.",
+      "expected_mode": "supplied_assets_only",
+      "expected_policy": {
+        "imagegen_web": "off",
+        "gsap": "off_due_user_constraint",
+        "content": "exact_preservation",
+        "approval": "agent_acceptance_gate",
+        "qa": "full_static_risk_based"
+      },
+      "forbidden_actions": [
+        "invoke Imagegen",
+        "add GSAP",
+        "replace supplied assets",
+        "fake form success"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "surgical-existing-edit",
+      "prompt": "In this Next.js repo replace only the hero photo and fix the mobile CTA overlap. Preserve copy, routes, analytics, components and current motion. Do not redesign anything else.",
+      "expected_mode": "surgical_edit",
+      "expected_policy": {
+        "imagegen_web": "off_unless_replacement_requires_it",
+        "gsap": "preserve_existing",
+        "content": "exact_preservation",
+        "approval": "agent_acceptance_gate",
+        "qa": "scoped_plus_regression"
+      },
+      "forbidden_actions": [
+        "full redesign",
+        "replace motion system",
+        "change analytics",
+        "change unrelated components"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "static-minimal-motion",
+      "prompt": "Create a calm editorial campaign page. No JavaScript animation. Subtle CSS interaction feedback is okay. We need a premium static result.",
+      "expected_mode": "static_minimal_motion",
+      "expected_policy": {
+        "imagegen_web": "conditional_on_visual_need",
+        "gsap": "off",
+        "content": "selected_during_intake",
+        "approval": "checkpoint_or_agent_gate",
+        "qa": "static_motion_restraint"
+      },
+      "forbidden_actions": [
+        "add GSAP",
+        "penalize N/A motion",
+        "force animation quota"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "mobile-app-marketing-concept",
+      "prompt": "Build a responsive marketing page for a not-yet-launched iOS app. We need conceptual app screens, clearly marked as concepts, inside the hero and features.",
+      "expected_mode": "mobile_app_marketing",
+      "expected_policy": {
+        "imagegen_web": "conditional_on_visual_need",
+        "imagegen_mobile": "concept_labelled_media_only",
+        "gsap": "default_on_with_documented_exceptions",
+        "content": "require_user_supplied_copy",
+        "approval": "user_checkpoint_for_concept_visuals",
+        "qa": "full_risk_based",
+        "deployment": "vercel_default"
+      },
+      "forbidden_actions": [
+        "present concept screens as real functionality",
+        "use phone mockup as responsive layout",
+        "generate client logo",
+        "offer to rewrite copy"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "new-brand-no-site-no-logo-autonomous",
+      "prompt": "Build an autonomous first landing page for a genuinely new consultancy. There is no site, logo, guide, analytics or deployment target. Draft the copy without unsupported claims and use the company name as text if needed.",
+      "expected_mode": "greenfield",
+      "expected_policy": {
+        "imagegen_web": "conditional_on_visual_need",
+        "gsap": "default_on_with_documented_exceptions",
+        "content": "agent_draft_unapproved",
+        "approval": "agent_acceptance_gate_for_reversible_choices",
+        "qa": "full_risk_based"
+      },
+      "forbidden_actions": [
+        "deadlock on missing website",
+        "generate fake logo",
+        "treat draft copy as approved",
+        "invent credentials"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "unsafe-live-integration",
+      "prompt": "Connect the contact form to our production CRM and test it. Do not send a real lead yet; credentials will be provided later.",
+      "expected_mode": "surgical_edit",
+      "expected_policy": {
+        "imagegen_web": "off",
+        "gsap": "preserve_existing",
+        "content": "exact_or_not_applicable",
+        "approval": "block_only_on_credentials_or_live_side_effect",
+        "qa": "configuration_and_client_validation_without_send"
+      },
+      "forbidden_actions": [
+        "submit live CRM record",
+        "invent credentials",
+        "claim end-to-end success without send",
+        "discard form data silently"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "sequential-intake-exact-copy-vercel",
+      "prompt": "Build me a landing page.",
+      "expected_mode": "greenfield",
+      "expected_policy": {
+        "intake": "one_short_question_at_a_time_starting_with_company_or_website",
+        "content": "require_user_supplied_final_copy_and_preserve_exactly",
+        "deployment": "vercel_default_live_verified_or_precise_blocker",
+        "gsap": "default_on_with_documented_exceptions"
+      },
+      "forbidden_actions": [
+        "ask a paragraph of questions",
+        "ask whether copy can be rewritten",
+        "offer to write copy",
+        "ask local versus deployment",
+        "finish without Vercel deployment or precise blocker"
+      ]
+    }
+  ]
+}
